@@ -1,4 +1,4 @@
-# 🐾 Bienvenido a **MadKat**
+# 👾 Bienvenido a **MadKat**
 
 ¡Hola y gracias por visitar **MadKat**!  
 Somos una tienda en línea donde la creatividad, el estilo y la calidad se encuentran en un solo lugar.
@@ -13,4 +13,4 @@ Ya sea que busques algo original para ti o el regalo perfecto, estás en el luga
 ---
 
 ¿Listo para descubrir lo que tenemos para ti?  
-👉 [Explora nuestra colección](#)
+👉 [Explora nuestra colección]
