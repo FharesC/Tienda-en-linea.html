@@ -14,24 +14,38 @@
         rel="stylesheet">
 </head>
 
+
+<!-- ACÁ COMIENZA EL CANVAS  -->
 <body>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="background-color: #1b2023;">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            
+            <h5 class="offcanvas-title text-light fs-4" id="offcanvasRightLabel"><i class="bi bi-cart2 "></i>&nbsp; Carrito de compras </h5>
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+              </div>
+            <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <div class="row d-flex justify-content-start" id="contCanvas">
 
             </div>
 
-            <div class="d-flex justify-content-start" id="contCanvas">
-                    <h4>Total a Pagar: &nbsp; </h4>
+            <div class="d-flex justify-content-start align-items-end text-light" id="contCanvas">
+                    <h4 >Total a Pagar: &nbsp; </h4>
                     <h4 id="pago"> 0</h4>
             </div>
         </div>
     </div>
-
+<!-- ACÁ TERMINA EL CANVAS -->
 
 
     <!-- Acá va el encabezado (navbar) -->
@@ -59,8 +73,8 @@
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight"><i class="bi bi-cart  text-light fs-5"></i>
                             <span
-                            class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger">
-                            3
+                            class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger" id="num">
+                            
                         </span>
                         </button>
                         <button type="button" class="btn  position-relative">
@@ -103,8 +117,7 @@
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <i class="bi bi-cart  text-light fs-5"></i>
                             <span
-                            class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger">
-                            3
+                            class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger" id="num2">   
                         </span>
                     </button>
 
@@ -280,12 +293,12 @@
         </div>
 
 
-        <div class="container-fluid  border-top border-1" style="background-color: #fdfdfd;">
+        <div class="container-fluid  border-top border-1" style="background-color: #e5e5e5;">
             <div class="container">
-                <h2 class="text-center fs-1 my-5" id="P" style="font-family: roboto;">Productos Destacados</h2>
+                <h2 class="text-center fs-1 my-5 text-black" id="P" style="font-family: roboto;">Productos Destacados</h2>
                 <div class="row d-flex flex-wrap justify-content-center mt-5" id="contenidoAca">         
 
-                    <div class="sk-chase position-absolute d-flex justify-content-center z-3" id="loader" style="bottom: -45rem;">
+                    <div class="sk-chase position-absolute d-flex justify-content-center z-3" id="loader">
                         <div class="sk-chase-dot"></div>
                         <div class="sk-chase-dot"></div>
                         <div class="sk-chase-dot"></div>
