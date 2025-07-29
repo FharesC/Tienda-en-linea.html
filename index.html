@@ -14,7 +14,38 @@
         rel="stylesheet">
 </head>
 
+
+<!-- ACÁ COMIENZA EL CANVAS  -->
 <body>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="background-color: #1b2023;">
+        <div class="offcanvas-header">
+            
+            <h5 class="offcanvas-title text-light fs-4" id="offcanvasRightLabel"><i class="bi bi-cart2 "></i>&nbsp; Carrito de compras </h5>
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+              </div>
+            <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row d-flex justify-content-start" id="contCanvas">
+
+            </div>
+
+            <div class="d-flex justify-content-start align-items-end text-light" id="contCanvas">
+                    <h4 >Total a Pagar: &nbsp; </h4>
+                    <h4 id="pago"> 0</h4>
+            </div>
+        </div>
+    </div>
+<!-- ACÁ TERMINA EL CANVAS -->
 
 
     <!-- Acá va el encabezado (navbar) -->
@@ -38,12 +69,17 @@
                                 2
                             </span>
                         </button>
-                        <button type="button" class="btn  position-relative">
-                            <i class="bi bi-cart  text-light fs-5"></i>
+                        <button class="btn" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"><i class="bi bi-cart  text-light fs-5"></i>
                             <span
-                                class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger">
-                                3
-                            </span>
+                            class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger" id="num">
+                            
+                        </span>
+                        </button>
+                        <button type="button" class="btn  position-relative">
+
+
                         </button>
                     </div>
                 </div>
@@ -77,17 +113,14 @@
                             2
                         </span>
                     </button>
-                    <button type="button" class="btn  position-relative">
-                        <i class="bi bi-cart  text-light fs-5"></i>
-                        <span class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger">
-                            3
+                    <button class="btn  position-relative" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="bi bi-cart  text-light fs-5"></i>
+                            <span
+                            class="position-absolute  start-75 top-30  translate-middle badge rounded-pill bg-danger" id="num2">   
                         </span>
                     </button>
                 </div>
-
-
-
-
             </div>
         </nav>
     </header>
@@ -250,176 +283,22 @@
         </div>
 
 
-        <div class="container-fluid  border-top border-1" style="background-color: #fdfdfd;">
+        <div class="container-fluid  border-top border-1" style="background-color: #e5e5e5;">
             <div class="container">
-                <div class="row d-flex flex-wrap justify-content-center">
-                    <h2 class="text-center fs-1 my-5" id="P" style="font-family: roboto;">Productos Destacados</h2>
+                <h2 class="text-center fs-1 my-5 text-black" id="P" style="font-family: roboto;">Productos Destacados</h2>
+                <div class="row d-flex flex-wrap justify-content-center mt-5" id="contenidoAca">         
 
-                    <div class="row d-flex justify-content-center mb-3">
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span class="badge  m-2 position-absolute start-0  text-bg-danger w-25 "
-                                    style="height: 1.4rem;">Oferta</span>
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/54.2e16d0ba.fill-1200x1400-c100.jpg" class="card-img-top h-100"
-                                    alt="sudadera negra marca MadkAt">
-                                <div class="card-body ">
-                                    <h5 class="card-title">Originals - Sudadera</h5>
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">39.99 €<span
-                                            class="text-secondary ms-3 fs-6 text-decoration-line-through">49.99 €</span>
-                                    </h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/1._CAMISETA_ORIGINALS_BLANC.2e16d0ba.fill-1200x1400-c100.jpg"
-                                    class="card-img-top h-100" alt="playera blanca marca MadkAt">
-                                <div class="card-body">
-                                    <h5 class="card-title">Originals - Camiseta</h5>
-
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">24.99 € </h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span class="badge  m-2 position-absolute start-0  text-bg-danger w-25 "
-                                    style="height: 1.4rem;">Oferta</span>
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/30.2e16d0ba.fill-1200x1400-c100.jpg" class="card-img-top h-100"
-                                    alt="sudadera veige marca MadkAt">
-                                <div class="card-body">
-                                    <h5 class="card-title">Originals - Sudadera</h5>
-
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">39.99 €<span
-                                            class="text-secondary ms-3 fs-6 text-decoration-line-through">49.99 €</span>
-                                    </h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/42.2e16d0ba.fill-1200x1400-c100.jpg" class="card-img-top h-100"
-                                    alt="playera blanca marca MadkAt">
-                                <div class="card-body border-top-2">
-                                    <h5 class="card-title">Originals - Camiseta </h5>
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">24.99 €</h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span class="badge  m-2 position-absolute start-0  text-bg-danger w-25 "
-                                    style="height: 1.4rem;">Oferta</span>
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/drift_dr110_rubius_front_12.2e16d0ba.fill-1200x1400-c100.jpg"
-                                    class="card-img-top h-100" alt="silla gamer marca MadkAt">
-                                <div class="card-body ">
-                                    <h5 class="card-title">DRIFT RUBIUS DR110</h5>
-
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">219.90 €<span
-                                            class="text-secondary ms-3 fs-6 text-decoration-line-through">259.90
-                                            €</span></h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/MKOG29_01.2e16d0ba.fill-1200x1400-c100.jpg"
-                                    class="card-img-top h-100" alt="mochila negra marca MadkAt">
-                                <div class="card-body">
-                                    <h5 class="card-title">Originals - Mochila</h5>
-
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">39.99 €</h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 ">
-                            <div class="card" style="width: 18rem;">
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/MKOG26_01.2e16d0ba.fill-1200x1400-c100.jpg"
-                                    class="card-img-top h-100" alt="pachón blanco marca MadkAt">
-                                <div class="card-body">
-                                    <h5 class="card-title">Originals - Botella</h5>
-
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">19.99 € </h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3 " id="O">
-                            <div class="card" style="width: 18rem;">
-                                <span class="badge  m-2 position-absolute start-0  text-bg-danger w-25 "
-                                    style="height: 1.4rem;">Oferta</span>
-                                <span
-                                    class=" m-2 position-absolute rounded-circle text-center d-flex align-items-center justify-content-center btn btn-light"
-                                    style="height: 2rem; left: 82%;;width: 2rem; background-color: rgb(230, 230, 230);"><i
-                                        class="bi bi-heart"></i></span>
-                                <img src="./images/MKUB21_01.2e16d0ba.fill-1200x1400-c100.jpg"
-                                    class="card-img-top h-100" alt="gorra blanca marca MadkAt">
-                                <div class="card-body border-top-2">
-                                    <h5 class="card-title">Urban - Gorra Blanca</h5>
-                                    <h5 class="card-title fw-bold" style="color: #8741e3;">29.99 €<span
-                                            class="text-secondary ms-3 fs-6 text-decoration-line-through">39.99 €</span>
-                                    </h5>
-                                    <a href="#" class="btn text-light w-100" style="background-color: #8741e3;">Añadir
-                                        al carrito</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+                    <div class="sk-chase position-absolute d-flex justify-content-center z-3" id="loader">
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                      </div>
+    </main>
+    <!-- esta parte es el footer (acá van todos los links) -->
+    <footer id="CO">
         <div class="container-fluid " style="background-color: #f8f9fa;">
             <div class="container text-center p-5">
                 <h2>Suscríbete a nuestro boletín</h2>
@@ -438,11 +317,6 @@
                 </form>
             </div>
         </div>
-    </main>
-
-    <!-- esta parte es el footer (acá van todos los links) -->
-
-    <footer id="CO">
         <div class="container-fluid" style="background-color: #162732;">
             <div class="container text-light pt-5">
                 <div class="row">
@@ -479,15 +353,11 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
