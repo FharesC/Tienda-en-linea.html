@@ -8,6 +8,7 @@ let pago = document.querySelector("#pago");
 let datosLocal = JSON.parse(localStorage.getItem("producto")) || [];
 let numero = document.querySelector("#num");
 let numero2 = document.querySelector("#num2");
+let carrito = [];
 
 fetch(URL)
   .then((Response) => Response.json())
@@ -17,6 +18,7 @@ fetch(URL)
       title: item.title,
       image: item.images[0],
       price: item.price,
+      isCart: false
     }));
     datos = detalles;
     loader.className = "d-none";
@@ -55,8 +57,8 @@ const filtroCanvas = (id) => {
     contenidoCanvas.innerHTML += cardCanvas(item);
   });
 };
+  
 
-let carrito = [];
 const cardCanvas = (item) => {
   numero.innerHTML = carrito.length + 1;
   numero2.innerHTML = carrito.length + 1;
